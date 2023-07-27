@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Sunbeam
 {
@@ -34,7 +36,7 @@ public class Sunbeam
         Ray ray = new Ray(pos, dir);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 30, 1))
+        if(Physics.Raycast(ray, out hit, 30))
         {
             CheckHit(hit, dir, sunbeam);
         }
@@ -65,6 +67,10 @@ public class Sunbeam
             Vector3 dir = Vector3.Reflect(direction, hitInfo.normal);
 
             CastRay(pos, dir, sunbeam);
+        }
+        if (hitInfo.collider.gameObject.CompareTag("Enemy"))
+        {
+            Object.Destroy(hitInfo.collider.gameObject);
         }
         else
         {

@@ -44,15 +44,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 934531315369699903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f0a8692fa40d4b48ba119c3634848a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 075cd0d06b17c39449ae1d7a5deff062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boat: {fileID: 3906412667199215038, guid: 6dd7b1cf2cb99a64bb94788091f76553, type: 3}
-  spawn:
-  - {fileID: 2567774488581650776}
-  - {fileID: 8013918195321541520}
-  - {fileID: 5386263847353588293}
-  spawnCd: 3
+  boat: {fileID: 0}
+  spawn: []
+  spawnCd: 5
 --- !u!1 &2567774488581650776
 GameObject:
   m_ObjectHideFlags: 0
